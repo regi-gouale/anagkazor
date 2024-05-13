@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Application de découverte du profil missionnaire
 
-## Getting Started
+Cette application permet aux utilisateurs de répondre à un questionnaire afin de découvrir leur profil missionnaire. Elle offre les fonctionnalités suivantes :
 
-First, run the development server:
+- Répondre au questionnaire pour déterminer son profil missionnaire
+- Consulter les résultats à la fin du test
+- Télécharger le résultat du test au format PDF
+- Envoyer le fichier de résultat par e-mail
+- Créer un compte et consulter l'historique des résultats de tests passés
+- L'administrateur peut consulter un tableau de bord
+- Accéder à des articles expliquant ce qu'est la mission d'évangélisation et les différents types de missionnaires
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clonez ce dépôt sur votre machine locale.
+2. Assurez-vous d'avoir [Node.js](https://nodejs.org) installé.
+3. Exécutez la commande `npm install` pour installer les dépendances.
+4. Configurez les paramètres de l'application dans le fichier `.env`.
+5. Exécutez la commande `npm start` pour démarrer l'application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies utilisées
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- TypeScript
+- SQLite
+- Next.js
+- Tailwindcss
+- Shadcn ui
+- React Query
+- Prisma
 
-## Learn More
+## Contribuer
 
-To learn more about Next.js, take a look at the following resources:
+Les contributions sont les bienvenues ! Pour contribuer à ce projet, veuillez suivre les étapes suivantes :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Forker ce dépôt.
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-fonctionnalite`).
+3. Committez vos modifications (`git commit -am 'Ajouter ma fonctionnalité'`).
+4. Pushez la branche (`git push origin feature/ma-fonctionnalite`).
+5. Ouvrez une pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Licence
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Ce projet est sous licence MIT. Veuillez consulter le fichier [LICENSE](LICENSE) pour plus d'informations.
