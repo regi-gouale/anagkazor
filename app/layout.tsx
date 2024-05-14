@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/src/features/themes/theme.provider";
+import { AppHeader } from "@/src/features/layout/header";
+import { AppFooter } from "@/src/features/layout/footer";
+import clsx from "clsx";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const popins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   title: "Anagkazor | Mon profil missionnaire",
@@ -16,14 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.variable
-        )}
-      >
-        {children}
+    <html lang="fr" className="h-full">
+      <body className={clsx(popins.className, "bg-background h-full")}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="flex flex-col h-full">
+            <AppHeader />
+            <div className="flex-1 max-w-2xl m-auto py-8 w-full">
+              {children}
+            </div>
+            <AppFooter />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

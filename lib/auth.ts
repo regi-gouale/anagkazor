@@ -13,35 +13,39 @@ export const authOptions: AuthOptions = {
       clientSecret: env.GOOGLE_CLIENT_SECRET,
       profile(profile) {
         return {
-          id: profile.id.toString(),
+          id: profile.sub,
           name: profile.name,
           email: profile.email,
           image: profile.picture,
+          emailVerified: profile.email_verified,
+
         };
       },
-      style: {
-        logo: 'https://cdn-icons-png.flaticon.com/512/281/281764.png',
-        bg: "#fff",
-        text: "#000",
-      }
+      // style: {
+      //   logo: 'https://cdn-icons-png.flaticon.com/512/281/281764.png',
+      //   bg: "#fff",
+      //   text: "#000",
+      // }
     }),
   ],
   callbacks: {
     session({ session, user }) {
+      console.log(session);
       if (!session?.user) return session;
-      session.user = user;
+      session.user.id = user.id;
+      console.log(session);
       return session;
     },
   },
   pages: {
     // signIn: "/auth/signin",
   },
-  theme: {
-    logo: "/favicon.ico",
-    brandColor: "#7C3AED",
-    colorScheme: "dark",
+  // theme: {
+  //   logo: "/favicon.ico",
+  //   brandColor: "#7C3AED",
+  //   colorScheme: "dark",
   
-  },
+  // },
 };
 
 export const getAuthSession = async () => {
