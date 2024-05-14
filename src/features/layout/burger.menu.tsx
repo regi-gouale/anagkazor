@@ -24,7 +24,7 @@ export const BurgerMenu = ({ session }: { session: Session | null }) => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="sm" variant="ghost">
-          <Menu className="text-primary hover:bg-primary" />
+          <Menu className="text-primary hover:bg-primary dark:text-primary-foreground" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>

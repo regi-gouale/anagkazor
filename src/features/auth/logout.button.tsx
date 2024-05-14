@@ -15,9 +15,9 @@ export const DropdownMenuItemLogout = () => {
       }}
     >
       {isPending ? (
-        <Loader className="mr-2" size={4} />
+        <Loader className="mr-2 h-4 w-4" />
       ) : (
-        <LogOut size={4} className="mr-2" />
+        <LogOut className="mr-2 h-4 w-4" />
       )}
       Se déconnecter
     </DropdownMenuItem>

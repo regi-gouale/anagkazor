@@ -24,14 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="h-full">
-      <body className={clsx(popins.className, "bg-background h-full")}>
+      <body className={clsx(popins.className, "bg-secondary h-full")}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="flex flex-col h-full">
-            <AppHeader />
+            <div className="w-full">
+              <AppHeader />
+            </div>
             <div className="flex-1 max-w-2xl m-auto py-8 w-full">
               {children}
             </div>
-            <AppFooter />
+            <div className="w-full mx-auto">
+              <AppFooter />
+            </div>
           </div>
         </ThemeProvider>
       </body>

@@ -12,17 +12,18 @@ export const AppHeader = async () => {
   return (
     <header className="border-b border-b-accent fixed top-0 z-20 bg-background w-full">
       <div className="container flex items-center justify-between py-2 max-w-4xl mx-auto gap-1">
-        <Link href="/" className="text-primary mr-auto">
+        <Link href="/" className="text-primary mr-auto dark:text-primary-foreground">
           <div className="flex flex-row items-end text-2xl font-extrabold font-sans mr-auto">
             Anagkazor
-            <div className="text-xs font-normal font-sans">ICC AuRA</div>
+            <div className="text-xs font-normal font-sans dark:text-primary">ICC AuRA</div>
           </div>
         </Link>
-        <nav className="flex gap-4 max-md:sr-only">
-          <Link href="/about" className="text-primary">
-            À propos
+        <nav className="flex justify-center gap-4 max-md:sr-only w-full text-primary dark:text-primary-foreground">
+          <Link href="/quiz" className="hover:font-bold rounded-md">
+            Accéder au questionnaire
           </Link>
-          <Link href="/contact" className="text-primary">
+          <div>|</div>
+          <Link href="/contact" className="">
             Contact
           </Link>
         </nav>

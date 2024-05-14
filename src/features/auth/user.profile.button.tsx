@@ -21,18 +21,18 @@ export const UserProfileButton = async () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="sm" variant="outline">
+        <Button size="sm" variant="outline" className="text-primary dark:text-primary-foreground dark:border-primary">
           {session?.user.name ?? ""}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem>
-          <Link href="/profile">
+      <DropdownMenuContent className="text-primary dark:text-secondary-foreground">
+        <DropdownMenuItem className="flex">
+          <Link href="/profile" className="flex mx-auto">
             <User2 className="mr-2 h-4 w-4" />
-            Profil
+            Mon profil
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem className="flex border-t border-accent">
           <DropdownMenuItemLogout />
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -16,12 +16,12 @@ export const LoginButton = () => {
       }}
       variant="ghost"
       size="sm"
-      className="text-primary hover:bg-primary hover:text-background  font-semibold"
+      className="text-primary dark:text-primary-foreground hover:bg-primary hover:text-background  font-semibold"
     >
       {isPending ? (
-        <Loader className="mr-2 h-4 w-4 max-md:sr-only" />
+        <Loader className="mr-2 h-4 w-4 max-md:sr-only text-primary" />
       ) : (
-        <LogIn className="mr-2 h-4 w-4 max-md:sr-only" />
+        <LogIn className="mr-2 h-4 w-4 max-md:sr-only text-primary" />
       )}
       <span className="max-md:sr-only text-base">Connexion</span>
     </Button>

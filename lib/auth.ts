@@ -30,10 +30,8 @@ export const authOptions: AuthOptions = {
   ],
   callbacks: {
     session({ session, user }) {
-      console.log(session);
       if (!session?.user) return session;
       session.user.id = user.id;
-      console.log(session);
       return session;
     },
   },
