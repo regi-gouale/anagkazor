@@ -23,7 +23,7 @@ export const AppHeader = async () => {
             Accéder au questionnaire
           </Link>
           <div>|</div>
-          <Link href="/contact" className="">
+          <Link href="/contact" className="hover:font-bold rounded-md">
             Contact
           </Link>
         </nav>
