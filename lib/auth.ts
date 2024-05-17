@@ -18,7 +18,6 @@ export const authOptions: AuthOptions = {
           email: profile.email,
           image: profile.picture,
           emailVerified: profile.email_verified,
-
         };
       },
       // style: {
@@ -29,9 +28,10 @@ export const authOptions: AuthOptions = {
     }),
   ],
   callbacks: {
-    session({ session, user }) {
+    async session({ session, user }) {
       if (!session?.user) return session;
       session.user.id = user.id;
+      if ("role" in user) session.user.role = user.role;
       return session;
     },
   },
@@ -42,7 +42,7 @@ export const authOptions: AuthOptions = {
   //   logo: "/favicon.ico",
   //   brandColor: "#7C3AED",
   //   colorScheme: "dark",
-  
+
   // },
 };
 
